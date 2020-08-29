@@ -1,0 +1,9 @@
+<form [formGroup]='stringDistanceForm' class="form-inline">
+    <input type="text" class="form-control mb-2 mr-sm-2" id="source" placeholder="Source" formControlName="source" appAlphabetOnly>
+    <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" id="target" placeholder="Target" formControlName="target" appAlphabetOnly>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" (click)="calculateDistance(stringDistanceForm);" [disabled]="!stringDistanceForm.valid">Calculate Distance</button>
+    <div class="text-danger">{{ error }}</div>
+    <div class="form-group col-md-6">{{ result }}</div>
+</form>

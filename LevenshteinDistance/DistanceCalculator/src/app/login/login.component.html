@@ -1,0 +1,8 @@
+<form [formGroup]='loginForm' class="form-inline">
+    <input type="text" class="form-control mb-2 mr-sm-2" id="userName" placeholder="User Name" formControlName="userName">
+    <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" id="password" placeholder="Password" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" (click)="login(loginForm);" [disabled]="!loginForm.valid">Sign In</button>            
+    <div class="text-danger">{{ error }}</div>
+</form>
